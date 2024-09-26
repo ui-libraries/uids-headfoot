@@ -1,4 +1,4 @@
-# Portable UIDS branding
+# UIDS header and footer
 UIDS-branded Libraries header and footer with minimal dependencies that can be applied to any site.
 
 ## Working assumptions
@@ -21,3 +21,4 @@ UIDS-branded Libraries header and footer with minimal dependencies that can be a
 ## To do
 - [x] I will add ths sass/scss files soon.
 - [ ] Skinny footer - maybe.
+- [ ] Global Libraries navigation might get stored here, also.
