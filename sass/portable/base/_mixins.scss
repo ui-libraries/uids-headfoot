@@ -1,0 +1,23 @@
+// Set font size in rem. Based on assumption that the root font size is set to 62.5%.
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin hide-offscreen {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+}
+
+@mixin show-onscreen {
+  position: inherit;
+  height: auto;
+  overflow: inherit;
+  width: auto;
+  left: auto;
+  top: auto;
+}

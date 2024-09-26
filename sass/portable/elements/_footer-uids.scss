@@ -1,0 +1,232 @@
+.footer-uids {
+  margin: 0;
+  padding: 3rem 0 8rem 0;
+  background-color: $hawk-black;
+  color: white;
+
+  p,
+  ul,
+  li {
+    color: white;
+    @include font-size(1.6);
+  }
+
+  .uilibraries-branding {
+    a {
+      &.block-iowa {
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: 160px;
+
+        svg {
+          fill: $hawk-gold;
+
+          path {
+            transition: 0.1s;
+          }
+
+          .block-i {
+            transition-delay: 0s;
+          }
+          .block-o {
+            transition-delay: 0.03s;
+          }
+          .block-w {
+            transition-delay: 0.06s;
+          }
+          .block-a {
+            transition-delay: 0.09s;
+          }
+        }
+        &:hover svg {
+          path {
+            opacity: 0.8;
+          }
+        }
+      }
+
+      &.libraries-link {
+        color: white;
+        text-decoration: none;
+
+        h2 {
+          margin: 1rem 0 2rem 0;
+          @include font-size(2);
+          font-weight: 300;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        font-family: $font-body;
+
+        > svg {
+          margin-right: 1rem;
+          width: 18px;
+          height: 18px;
+          fill: white;
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          > svg {
+            fill: white;
+            height: 30px;
+            transition: 0.1s;
+          }
+
+          &:hover {
+            text-decoration: underline;
+            color: white;
+
+            > svg {
+              fill: $hawk-gold;
+            }
+          }
+        }
+      }
+    }
+
+    &.links-uilibraries {
+      &--contact {
+        li {
+          display: flex;
+          align-items: center;
+
+          a {
+            display: inline-block;
+            margin: 0;
+            padding: 0.25rem 0;
+            color: $hawk-gold;
+
+            &:hover {
+              color: $hawk-gold;
+            }
+          }
+        }
+      }
+
+      &--social-media {
+        margin-bottom: 2rem;
+
+        li {
+          display: inline-block;
+          margin-right: 2px;
+        }
+      }
+
+      &--info {
+        li {
+          a {
+            display: inline-block;
+            margin: 0;
+            padding: 0.25rem 0;
+          }
+
+          &.other-links {
+            margin-top: 2rem;
+          }
+        }
+      }
+
+      &--misc-icons {
+        margin-top: 2rem;
+
+        li {
+          display: inline-block;
+          margin-right: 4px;
+        }
+      }
+    }
+
+    &.links-uids {
+      &--global {
+        margin-top: 2rem;
+
+        ul {
+          li {
+            @include font-size(1.4);
+            display: inline-block;
+            line-height: 1.6em;
+
+            &:after {
+              display: inline-block;
+              margin: 0 0.5em 0 0.75em;
+              content: "|";
+            }
+            &:first-of-type {
+              display: block;
+
+              &:after {
+                content: none;
+              }
+            }
+            &:last-of-type:after {
+              content: none;
+            }
+
+            a {
+              color: $hawk-gold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 4rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: $fixed-width;
+    font-family: "Roboto", sans-serif;
+
+    .footer-grouping {
+      &--first {
+        flex: 0 1 50%;
+      }
+      &--second {
+        flex: 0 1 40%;
+      }
+      &--third {
+        flex: 0 1 100%;
+        @include font-size(1);
+      }
+    }
+
+    @media (max-width: $medium-width) {
+      flex-direction: column;
+
+      nav.links-uids--global {
+
+        ul {
+
+          li {
+            display: block;
+
+            &:after {
+              content: "";
+            }
+          }
+        }
+      }
+    }
+  }
+}
