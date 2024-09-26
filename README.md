@@ -20,5 +20,6 @@ UIDS-branded Libraries header and footer with minimal dependencies that can be a
 
 ## To do
 - [x] I will add ths sass/scss files soon.
+- [ ] Update the social media icons SVG to match https://www.lib.uiowa.edu/.
 - [ ] Skinny footer - maybe.
 - [ ] Global Libraries navigation might get stored here, also.
