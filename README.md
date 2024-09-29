@@ -6,13 +6,10 @@ UIDS-branded Libraries header and footer with minimal dependencies that can be a
 - Start with a skinny header and a full footer as the default.
 
 ## Example
-[https://s-lib024.lib.uiowa.edu/portable-branding/example.php](https://s-lib024.lib.uiowa.edu/portable-branding/example.php)
-
-## NEW example (work-in-progress)
 [https://ui-libraries.github.io/uids-headfoot/](https://ui-libraries.github.io/uids-headfoot/)
 
 ## USE THIS CSS
- - https://s-lib024.lib.uiowa.edu/portable-branding/css/portable.css
+ - https://s-lib024.lib.uiowa.edu/portable-branding/css/.css
 
 ## Salient files
 - includes
