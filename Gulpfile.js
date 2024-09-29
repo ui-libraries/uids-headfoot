@@ -12,7 +12,7 @@ const size = require('gulp-size');
 function stylesTask() {
   const stylesSource = './sass/**/*.scss';
   const stylesDest1 = './css/';
-  const stylesDest2 = './_includes/';
+  const stylesDest2 = './docs/_includes/';
 
   // const sizefull = size({ showFiles: true, uncompressed: true });
   const sizegzip = size({ showFiles: true, gzip: true });
