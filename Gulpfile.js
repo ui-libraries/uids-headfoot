@@ -11,7 +11,7 @@ const size = require('gulp-size');
 
 function stylesTask() {
   const stylesSource = './sass/**/*.scss';
-  const stylesDest1 = './css/';
+  // const stylesDest1 = './css/';
   const stylesDest2 = './docs/_includes/';
 
   // const sizefull = size({ showFiles: true, uncompressed: true });
@@ -24,10 +24,10 @@ function stylesTask() {
     .pipe(sass())
     .pipe(autoPrefixer({ grid: false }))
     .pipe(cleanCSS({ format: 'compress' }))
-    // .pipe(sizefull)
     .pipe(sizegzip)
+    // .pipe(sizefull)
     .pipe(sourcemaps.write())
-    .pipe(dest(stylesDest1))
+    // .pipe(dest(stylesDest1))
     .pipe(dest(stylesDest2));
 }
 
