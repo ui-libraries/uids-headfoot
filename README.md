@@ -8,9 +8,7 @@ UIDS-branded Libraries header and footer with minimal dependencies that can be a
 ## Example
 [https://ui-libraries.github.io/uids-headfoot/](https://ui-libraries.github.io/uids-headfoot/)
 
-## Salient files
-- docs
-	- _includes
-		- uids-header.html
-		- uids-footer.html
-		- uids-headfoot.css
+## The salient files for porting the Libraries' UIDS header and footer to other sites are:
+- docs/_includes/uids-headfoot.css
+- docs/_includes/uids-header.html
+- docs/_includes/uids-footer.html
