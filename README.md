@@ -8,12 +8,9 @@ UIDS-branded Libraries header and footer with minimal dependencies that can be a
 ## Example
 [https://ui-libraries.github.io/uids-headfoot/](https://ui-libraries.github.io/uids-headfoot/)
 
-## USE THIS CSS
- - https://s-lib024.lib.uiowa.edu/portable-branding/css/.css
-
 ## Salient files
-- includes
-	- uids-header.html
-	- uids-footer.html
-- css
-	- portable.css
+- docs
+	- _includes
+		- uids-header.html
+		- uids-footer.html
+		- uids-headfoot.css
