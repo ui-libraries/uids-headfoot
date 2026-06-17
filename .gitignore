@@ -14,6 +14,7 @@ desktop.ini
 node_modules/
 
 # Gulp / Sass
+Gulpfile.js
 .gulp-cache/
 .sass-cache/
 .cache/
