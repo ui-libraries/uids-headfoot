@@ -13,6 +13,13 @@ desktop.ini
 # Node.js
 node_modules/
 
+# Gulp / Sass
+.gulp-cache/
+.sass-cache/
+.cache/
+package.json
+package-lock.json
+
 # Logs
 logs
 *.log
