@@ -4,16 +4,14 @@ footer.footer-uids {
   background-color: $hawk-black;
   color: white;
 
-  p,
-  ul,
-  li {
+  p, ul, li {
     color: white;
     @include font-size(1.6);
   }
 
-  .uilibraries-branding {
+  .logo--footer {
     a {
-      &.block-iowa {
+      // &.block-iowa {
         display: block;
         margin: 0;
         padding: 0;
@@ -44,9 +42,10 @@ footer.footer-uids {
             opacity: 0.8;
           }
         }
-      }
+      // }
 
-      &.libraries-link {
+      &.libraries-link,
+      a.site-name-link {
         color: white;
         text-decoration: none;
 
@@ -60,6 +59,22 @@ footer.footer-uids {
           text-decoration: underline;
         }
       }
+    }
+  }
+
+  .site-name-link {
+
+    color: white;
+    text-decoration: none;
+
+    h2 {
+      margin: 1rem 0 2rem 0;
+      @include font-size(2);
+      font-weight: 500;
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 
@@ -188,7 +203,8 @@ footer.footer-uids {
     }
   }
 
-  &__inner {
+  // &__inner,
+  .footer__container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
