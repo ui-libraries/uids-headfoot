@@ -3,7 +3,7 @@
   margin: 0 0 10px 0;
   padding: 0;
   min-height: 50px;
-  background-color: $hawk-gold;
+  background-color: var(--hawk-gold);
 
   &__inner {
     margin: 0 auto;
@@ -19,11 +19,11 @@
       margin: 8px 10px 8px 0;
       padding: 15px 15px 10px 15px;
       width: auto;
-      background-color: $hawk-black;
+      background-color: var(--hawk-black);
 
       svg {
         height: 26px;
-        fill: $hawk-gold;
+        fill: var(--hawk-gold);
 
         path {
           transition: 0.1s;
