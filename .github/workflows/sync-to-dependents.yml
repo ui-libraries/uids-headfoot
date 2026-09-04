@@ -1,0 +1,61 @@
+name: Sync to Dependent Repositories
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/_includes/**'
+      - 'docs/_layouts/**'
+      - 'sass/**'
+
+jobs:
+  sync-files:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - repo: wallace
+            target-path: includes
+            sync-branches:
+              - test
+
+    steps:
+      - name: Checkout uids-headfoot
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          path: source-repo
+
+      - name: Sync to each branch in ${{ matrix.repo }}
+        run: |
+          for branch in ${{ join(matrix.sync-branches, ' ') }}; do
+            echo "Syncing to ${{ matrix.repo }}:$branch"
+            
+            # Checkout dependent repo with specific branch
+            rm -rf target-repo
+            git clone --branch $branch https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ui-libraries/${{ matrix.repo }}.git target-repo
+            
+            cd target-repo
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            
+            # Copy files
+            cp ../source-repo/docs/_includes/uids-header.html ${{ matrix.target-path }}/
+            cp ../source-repo/docs/_includes/uids-footer.html ${{ matrix.target-path }}/
+            cp ../source-repo/docs/_includes/uids-headfoot.css ${{ matrix.target-path }}/
+            
+            # Commit and push if there are changes
+            if ! git diff --quiet; then
+              git add ${{ matrix.target-path }}/uids-header.html ${{ matrix.target-path }}/uids-footer.html ${{ matrix.target-path }}/uids-headfoot.css
+              git commit -m "chore: sync header/footer from uids-headfoot
+
+Synced from uids-headfoot commit: ${{ github.sha }}"
+              git push origin $branch
+              echo "✓ Changes pushed to $branch"
+            else
+              echo "✓ No changes needed for $branch"
+            fi
+            
+            cd ..
+          done
