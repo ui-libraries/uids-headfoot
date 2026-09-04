@@ -8,6 +8,7 @@ on:
       - 'docs/_includes/**'
       - 'docs/_layouts/**'
       - 'sass/**'
+  workflow_dispatch:
 
 jobs:
   sync-files:
@@ -48,9 +49,7 @@ jobs:
             # Commit and push if there are changes
             if ! git diff --quiet; then
               git add ${{ matrix.target-path }}/uids-header.html ${{ matrix.target-path }}/uids-footer.html ${{ matrix.target-path }}/uids-headfoot.css
-              git commit -m "chore: sync header/footer from uids-headfoot
-
-Synced from uids-headfoot commit: ${{ github.sha }}"
+              git commit -m "chore: sync header/footer from uids-headfoot" -m "Synced from uids-headfoot commit: ${{ github.sha }}"
               git push origin $branch
               echo "✓ Changes pushed to $branch"
             else
