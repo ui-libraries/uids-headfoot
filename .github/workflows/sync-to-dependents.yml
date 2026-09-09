@@ -35,7 +35,7 @@ jobs:
             
             # Checkout dependent repo with specific branch
             rm -rf target-repo
-            git clone --branch $branch https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ui-libraries/${{ matrix.repo }}.git target-repo
+            git clone --branch $branch https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/ui-libraries/${{ matrix.repo }}.git target-repo
             
             cd target-repo
             git config user.name "github-actions[bot]"
