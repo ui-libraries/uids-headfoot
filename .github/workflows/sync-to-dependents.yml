@@ -20,6 +20,10 @@ jobs:
             target-path: includes
             sync-branches:
               - test
+          - repo: Heirs_of_Hippocrates
+            target-path: includes
+            sync-branches:
+              - host-db
 
     steps:
       - name: Checkout uids-headfoot
